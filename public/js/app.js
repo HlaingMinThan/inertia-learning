@@ -2102,7 +2102,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["posts"],
+  props: ["posts", "filter"],
   components: {
     flash: _shared_flash_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     post: _shared_post_vue__WEBPACK_IMPORTED_MODULE_1__.default,
@@ -2110,7 +2110,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      search: ""
+      search: this.filter //remember  filter after rerendering
+
     };
   },
   methods: {

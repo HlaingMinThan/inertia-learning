@@ -38,11 +38,11 @@ import flash from "../shared/flash.vue";
 import post from "../shared/post.vue";
 import pagination from "../shared/pagination.vue";
 export default {
-    props: ["posts"],
+    props: ["posts", "filter"],
     components: { flash, post, pagination },
     data() {
         return {
-            search: ""
+            search: this.filter //remember  filter after rerendering
         };
     },
     methods: {

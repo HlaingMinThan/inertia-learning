@@ -9,10 +9,12 @@ class PostController extends Controller
     public function index()
     {
         return inertia('Posts/index', [
+            'filter' => request('search'),
             'posts' => Post::latest()
                         ->filter(request('search'))
                         ->paginate(15)
                         ->withQueryString() //append all query string with pagination url
+            //this method make not forget query string after pagination links click
         ]);
     }
 
